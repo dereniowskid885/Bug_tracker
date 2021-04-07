@@ -27,7 +27,7 @@
 }
 
 #home .home_title h2{
-    font-size: calc(0.8rem + 0.7vw);
+    font-size: calc(0.8rem + 0.6vw);
     color: rgba(0, 0, 0, 0.6);
 }
 
@@ -37,7 +37,32 @@
 }
 
 #home .home h2{
-    font-size: calc(0.7rem + 2.5vw);
+    font-size: calc(0.7rem + 2vw);
+    text-align: center;
+}
+
+#home .menu{
+    height: 4vh;
+    margin: 0 auto;
+    width: 30%;
+}
+
+#home .menu ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    text-transform: uppercase;
+    font-size: calc(0.6rem + 0.6vw);
+    text-shadow: 0 2px 0 rgba(0, 0, 0, 0.2);
+}
+
+#home .menu ul li{
+    transition: 0.3s text-shadow;
+    padding: 0.3em;
+}
+
+#home .menu ul li:hover{
+    text-shadow: 3px 3px 0 white;
 }
 
 #home .container{
@@ -47,6 +72,22 @@
     color:white;
     padding: 3em;
     flex-direction: column;
+    box-shadow:
+        0 6.2px 5.5px -1px rgba(0, 0, 0, 0.056),
+        0 15.7px 13.9px -1px rgba(0, 0, 0, 0.08),
+        0 32.1px 28.4px -1px rgba(0, 0, 0, 0.1),
+        0 66.1px 58.4px -1px rgba(0, 0, 0, 0.124),
+        0 181px 160px -1px rgba(0, 0, 0, 0.18);
+}
+
+#home .bug_add_form input, select{
+    padding: 3px;
+    border: 2px solid black;
+    box-shadow:
+        0 4.2px 4.3px rgba(0, 0, 0, 0.038),
+        0 11.6px 11.8px rgba(0, 0, 0, 0.055),
+        0 28px 28.3px rgba(0, 0, 0, 0.072),
+        0 93px 94px rgba(0, 0, 0, 0.11);
 }
 
 #home .form_section{
@@ -56,37 +97,45 @@
 }
 
 #home .bug_add{
-    font-size: calc(0.7rem + 1.2vw);
-    width: 50%;
+    font-size: calc(0.7rem + 0.7vw);
+    width: 60%;
 }
 
 #home .form_buttons{
     display: flex;
     flex-direction: row;
     justify-content: center;
-    padding: 0.5em;
+    padding: 0.1em;
 }
 
 #home .bug_add button{
-    font-size: calc(0.6rem + 0.8vw);
-    padding: 0.5em;
+    font-size: calc(0.6rem + 0.7vw);
+    padding: 0.2em;
     text-transform: uppercase;
     margin: 1em;
     cursor: pointer;
-    letter-spacing: 2px;
-    transition: 0.8s;
+    letter-spacing: 1px;
+    transition: 0.2s;
+    background: none;
+    border: none;
 }
 
 #home .bug_add button:hover{
-    background-color: black;
-    color: white;
-    border: 2px solid white;
+    text-shadow: 2px 2px 0 white;
 }
 
 #bug_priority,
 #bug_assign,
 #bug_description{
     font-size: calc(0.7rem + 0.4vw);
+}
+
+#home .bug_list{
+    display: none;
+}
+
+#home .bug_about{
+    display: none;
 }
 
 @media only screen and (max-width: 550px){

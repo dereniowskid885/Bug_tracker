@@ -27,7 +27,8 @@ body{
     background-attachment: fixed;
 }
 
-a{
+ul li{
+    list-style: none;
     text-decoration: none;
     cursor: pointer;
 }
