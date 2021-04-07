@@ -1,1 +1,38 @@
-/* You can add global styles to this file, and also import other style files */
+:root{
+    --gradient: linear-gradient(
+        45deg,
+        rgb(77, 71, 71),
+        #6dd5fa,
+        #6dd5fa,
+        #2980b9
+    );
+
+    --text-gradient: linear-gradient(
+        90deg, 
+        #c31432, #240b36, #aa4b6b, #6b6b83, #3b8d99, #c31432, #240b36
+    );
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Teko', sans-serif;
+}
+
+body{
+    background: var(--gradient);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+}
+
+a{
+    text-decoration: none;
+    cursor: pointer;
+}
+
+img{
+    display: block;
+    max-width: 100%;
+}

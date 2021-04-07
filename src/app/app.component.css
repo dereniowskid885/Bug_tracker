@@ -1,0 +1,111 @@
+.container{
+    margin: 0 auto;
+    max-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#home .home_title{
+    margin: 0 auto;
+    text-align: center;
+    font-size: calc(0.8rem + 2vw);
+    padding: 0.5em 1.5em;
+    width: 70vw;
+    background: var(--text-gradient);
+    background-clip: text;
+    color: transparent;
+    background-size: 150%;
+    animation: gradient-animation 8s infinite alternate;
+    text-shadow: 0 2px 0 rgba(0, 0, 0, 0.2); 
+}
+
+#home .home_title h1{
+    letter-spacing: 0.1em;
+    font-style: italic;   
+}
+
+#home .home_title h2{
+    font-size: calc(0.8rem + 0.7vw);
+    color: rgba(0, 0, 0, 0.6);
+}
+
+#home .home_title fa-icon{
+    color: rgba(0, 0, 0, 0.6);
+    padding: 0.5em;
+}
+
+#home .home h2{
+    font-size: calc(0.7rem + 2.5vw);
+}
+
+#home .container{
+    width: calc(10vw + 60vw);
+    border-radius: 1em;
+    background-color: rgba(0, 0, 0, 0.4);
+    color:white;
+    padding: 3em;
+    flex-direction: column;
+}
+
+#home .form_section{
+    display: flex;
+    flex-direction: column;
+    padding-top: 0.5em;
+}
+
+#home .bug_add{
+    font-size: calc(0.7rem + 1.2vw);
+    width: 50%;
+}
+
+#home .form_buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 0.5em;
+}
+
+#home .bug_add button{
+    font-size: calc(0.6rem + 0.8vw);
+    padding: 0.5em;
+    text-transform: uppercase;
+    margin: 1em;
+    cursor: pointer;
+    letter-spacing: 2px;
+    transition: 0.8s;
+}
+
+#home .bug_add button:hover{
+    background-color: black;
+    color: white;
+    border: 2px solid white;
+}
+
+#bug_priority,
+#bug_assign,
+#bug_description{
+    font-size: calc(0.7rem + 0.4vw);
+}
+
+@media only screen and (max-width: 550px){
+    #home .bug_add{
+        width: 90%;
+    }
+}
+
+/*
+=========
+Keyframes
+=========
+*/
+@keyframes gradient-animation {
+    0% {background-position: left}
+    50% {background-position: right}
+    100% {background-position: left}
+  }
+/*
+=========
+=========
+*/
