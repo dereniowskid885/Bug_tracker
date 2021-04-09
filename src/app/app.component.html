@@ -8,7 +8,8 @@
     </div>
     <div class="menu">
         <ul>
-            <li><a id="add_button">Add</a></li>
+            <li><a id="project_add_button">Add project</a></li>
+            <li><a id="bug_add_button">Add bug</a></li>
             <li><a id="list_button">List</a></li>
             <li><a id="about_button">About</a></li>
         </ul>
@@ -16,7 +17,7 @@
     <div class="home container">
         <div class="bug_add">
             <h2>Create new bug track: </h2>
-            <form class="bug_add_form">
+            <form class="add_form">
                 <div class="form_section">
                     <label for="bug_priority">Priority</label>
                     <select id="bug_priority">
@@ -35,6 +36,24 @@
                 </div>
                 <div class="form_buttons">
                     <button type="submit">Create</button>
+                    <button type="reset">Clear</button>
+                </div>
+            </form>
+        </div>
+        <div class="project_add">
+            <h2>Add new project: </h2>
+            <form class="add_form">
+                <div class="form_section">
+                    <label for="project_name">Project name</label>
+                    <input type="text" id="project_name" />
+                </div>
+                <div id="project_members_div" class="form_section">
+                    <label for="project_members">Project members</label>
+                    <div><input type="text" name="project_member"></div>
+                </div>
+                <div class="form_buttons">
+                    <button type="submit">Add</button>
+                    <button class="add_project_member">Add new member</button>
                     <button type="reset">Clear</button>
                 </div>
             </form>

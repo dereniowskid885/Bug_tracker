@@ -17,9 +17,30 @@ export class AppComponent implements OnInit{
   faBinoculars = faBinoculars;
 
   ngOnInit(): void{
+    // Project member add button
+    $(document).ready(function() {
+      var projects_div = $("#project_members_div");
+      var add_member_button = $(".add_project_member");
+
+      $(add_member_button).click(function(e) {
+        e.preventDefault();
+        $(projects_div).append('<div><input type="text" name="mytext[]"/><a href="#" class="delete">Delete</a></div>');
+      });
+
+      $(projects_div).on("click", ".delete", function(e) {
+        e.preventDefault();
+        $(this).parent("div").remove();
+      });
+    });
+
     // divs hide and show on button click in home container
     $(document).ready(function() {
-      $("#add_button").click(function() {
+      $("#project_add_button").click(function() {
+        $(".home > div:not(.project_add").hide("fast");
+        $(".project_add").show("slow");
+      });
+
+      $("#bug_add_button").click(function() {
         $(".home > div:not(.bug_add").hide("fast");
         $(".bug_add").show("slow");
       });

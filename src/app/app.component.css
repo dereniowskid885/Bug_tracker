@@ -4,7 +4,6 @@
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
 }
 
 #home .home_title{
@@ -44,7 +43,8 @@
 #home .menu{
     height: 4vh;
     margin: 0 auto;
-    width: 30%;
+    padding: 0 30vw 0 30vw;
+    width: 100%;
 }
 
 #home .menu ul{
@@ -67,6 +67,7 @@
 
 #home .container{
     width: calc(10vw + 60vw);
+    height: 50vh;
     border-radius: 1em;
     background-color: rgba(0, 0, 0, 0.4);
     color:white;
@@ -78,9 +79,15 @@
         0 32.1px 28.4px -1px rgba(0, 0, 0, 0.1),
         0 66.1px 58.4px -1px rgba(0, 0, 0, 0.124),
         0 181px 160px -1px rgba(0, 0, 0, 0.18);
+    position: relative;
+    overflow-y: scroll;
 }
 
-#home .bug_add_form input, select{
+#home .container::-webkit-scrollbar{
+    display: none;
+}
+
+#home .add_form input, select{
     padding: 3px;
     border: 2px solid black;
     box-shadow:
@@ -96,19 +103,23 @@
     padding-top: 0.5em;
 }
 
-#home .bug_add{
+#home .bug_add,
+#home .project_add{
     font-size: calc(0.7rem + 0.7vw);
-    width: 60%;
+    width: 50%;
 }
 
 #home .form_buttons{
+    position: absolute;
     display: flex;
-    flex-direction: row;
     justify-content: center;
-    padding: 0.1em;
+    bottom: 0;
+    width: 70vw;
+    left: 0;
+    z-index: 2;
 }
 
-#home .bug_add button{
+#home button{
     font-size: calc(0.6rem + 0.7vw);
     padding: 0.2em;
     text-transform: uppercase;
@@ -120,7 +131,7 @@
     border: none;
 }
 
-#home .bug_add button:hover{
+#home button:hover{
     text-shadow: 2px 2px 0 white;
 }
 
@@ -128,6 +139,10 @@
 #bug_assign,
 #bug_description{
     font-size: calc(0.7rem + 0.4vw);
+}
+
+#home .project_add{
+    display: none;
 }
 
 #home .bug_list{
@@ -138,8 +153,9 @@
     display: none;
 }
 
-@media only screen and (max-width: 550px){
-    #home .bug_add{
+@media only screen and (max-width: 600px){
+    #home .bug_add,
+    #home .project_add{
         width: 90%;
     }
 }
