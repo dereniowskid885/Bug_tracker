@@ -27,6 +27,18 @@ body{
     background-attachment: fixed;
 }
 
+body::after{
+    content: '';
+    position: absolute;
+    left: 0; 
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: 0.2;
+    z-index: -1;
+}
+
 ul li{
     list-style: none;
     text-decoration: none;

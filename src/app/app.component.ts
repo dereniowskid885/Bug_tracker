@@ -24,7 +24,7 @@ export class AppComponent implements OnInit{
 
       $(add_member_button).click(function(e) {
         e.preventDefault();
-        $(projects_div).append('<div><input type="text" name="mytext[]"/><a href="#" class="delete">Delete</a></div>');
+        $(projects_div).append('<div><input style="padding: 3px; border: 2px solid black; margin-top: 5px; width: 40%;" id="project_member" type="text" name="project_member"/><a href="#" class="delete" style="color: black; text-decoration: none; list-style: none; margin-left: 15px; font-size: calc(0.5rem + 0.8vw);">Delete</a></div>');
       });
 
       $(projects_div).on("click", ".delete", function(e) {

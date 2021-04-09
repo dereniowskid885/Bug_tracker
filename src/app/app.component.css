@@ -4,6 +4,7 @@
     width: 100%;
     display: flex;
     align-items: center;
+    flex: 1
 }
 
 #home .home_title{
@@ -43,8 +44,7 @@
 #home .menu{
     height: 4vh;
     margin: 0 auto;
-    padding: 0 30vw 0 30vw;
-    width: 100%;
+    width: 50vw;
 }
 
 #home .menu ul{
@@ -66,21 +66,12 @@
 }
 
 #home .container{
-    width: calc(10vw + 60vw);
-    height: 50vh;
-    border-radius: 1em;
-    background-color: rgba(0, 0, 0, 0.4);
+    width: calc(10vw + 40vw);
     color:white;
     padding: 3em;
     flex-direction: column;
-    box-shadow:
-        0 6.2px 5.5px -1px rgba(0, 0, 0, 0.056),
-        0 15.7px 13.9px -1px rgba(0, 0, 0, 0.08),
-        0 32.1px 28.4px -1px rgba(0, 0, 0, 0.1),
-        0 66.1px 58.4px -1px rgba(0, 0, 0, 0.124),
-        0 181px 160px -1px rgba(0, 0, 0, 0.18);
-    position: relative;
     overflow-y: scroll;
+    position: relative;
 }
 
 #home .container::-webkit-scrollbar{
@@ -90,11 +81,6 @@
 #home .add_form input, select{
     padding: 3px;
     border: 2px solid black;
-    box-shadow:
-        0 4.2px 4.3px rgba(0, 0, 0, 0.038),
-        0 11.6px 11.8px rgba(0, 0, 0, 0.055),
-        0 28px 28.3px rgba(0, 0, 0, 0.072),
-        0 93px 94px rgba(0, 0, 0, 0.11);
 }
 
 #home .form_section{
@@ -106,16 +92,17 @@
 #home .bug_add,
 #home .project_add{
     font-size: calc(0.7rem + 0.7vw);
-    width: 50%;
+    width: 70%;
 }
 
 #home .form_buttons{
-    position: absolute;
+    height: 7vh;
+    position: fixed;
     display: flex;
     justify-content: center;
     bottom: 0;
-    width: 70vw;
     left: 0;
+    width: 100vw;
     z-index: 2;
 }
 
@@ -123,7 +110,7 @@
     font-size: calc(0.6rem + 0.7vw);
     padding: 0.2em;
     text-transform: uppercase;
-    margin: 1em;
+    margin: 0 1em 0 1em;
     cursor: pointer;
     letter-spacing: 1px;
     transition: 0.2s;
@@ -137,8 +124,13 @@
 
 #bug_priority,
 #bug_assign,
-#bug_description{
+#bug_description,
+#project_member{
     font-size: calc(0.7rem + 0.4vw);
+}
+
+#project_member{
+    width: 10vw;
 }
 
 #home .project_add{
@@ -156,8 +148,17 @@
 @media only screen and (max-width: 600px){
     #home .bug_add,
     #home .project_add{
-        width: 90%;
+        width: 100%;
     }
+
+    #home .menu{
+        width: 70vw;
+    }
+
+    #home .container{
+        width: 60vw;
+    }
+
 }
 
 /*
